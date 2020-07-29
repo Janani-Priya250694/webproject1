@@ -1,7 +1,7 @@
 pipeline{
 agent any
 triggers {
-cron("* * * * *")
+pollSCM("* * * * *")
 upstream(upstreamProjects: 'triggers', threshold: hudson.model.Result.SUCCESS) }
   stages{
     stage('Compile') {
