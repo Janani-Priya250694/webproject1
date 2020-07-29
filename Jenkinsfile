@@ -1,5 +1,8 @@
 pipeline{
 agent any
+trigeers {
+pollSCM("* * * * *")
+}
   stages{
     stage('Compile') {
     steps{
