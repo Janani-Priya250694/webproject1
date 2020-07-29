@@ -11,6 +11,11 @@ upstream(upstreamProjects: 'triggers', threshold: hudson.model.Result.SUCCESS) }
         }
        } 
 post {
+success {
+echo 'I will run for success and will send notification to slack'
+slackSend channel: '#devops-concepts', message: env.BUILD_ID + 'completed'
+}
+
 failure { 
 echo 'I will run for failure'
 }
