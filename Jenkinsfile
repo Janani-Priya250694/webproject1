@@ -8,10 +8,8 @@ agent any
         }
        } 
 post {
-success { echo 'I will run for success'}
-}
-      
-post {
-failure { echo 'I will run for failure'}
+success { 
+echo 'I will run for success'
 }
 }
+ }   
