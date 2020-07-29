@@ -6,8 +6,12 @@ agent any
       echo "Hello World"
          }
         }
-       }       
+       } 
 post {
-always { echo 'I will run always'}
+success { echo 'I will run for success'}
+}
+      
+post {
+failure { echo 'I will run for failure'}
 }
 }
